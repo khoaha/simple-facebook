@@ -4,11 +4,12 @@
 // @description   Hides all Like actions on Facebook
 // @include       https://www.facebook.com/*
 // @require       http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js
-// @version       0.1
+// @version       0.11
 // ==/UserScript==
 
 document.addEventListener("DOMSubtreeModified", function() {
-    $("._5pcp._5vsi").remove(); // Like, Comment, Share bar
+    /* Removing the following bar break status posting, so settle for emptying */
+    $("._5pcp._5vsi").empty(); // Like, Comment, Share bar
     $("._52gg._6mp.fsm.fwn.fcg").remove(); // Like, Comment sub-bar
     $(".fbTimelineFeedbackHeader").remove(); // Like, Comment, Promote Share bar
     $("._53d._53q").remove(); // Like, Comment overlay for photo thumbnails
